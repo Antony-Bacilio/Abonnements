@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<GridPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+          xmlns="http://javafx.com/javafx/8" fx:controller="graphic.window.tabclient.TabClientController">
+    <children>
+        <TitledPane alignment="TOP_LEFT" animated="false" collapsible="false" contentDisplay="BOTTOM"
+                    maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Client Filter"
+                    textFill="#1b0680" GridPane.columnIndex="1">
+            <content>
+                <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                    <children>
+                        <Button defaultButton="true" mnemonicParsing="false" onAction="#rechercherClient"
+                                text="Chercher" GridPane.columnIndex="2" GridPane.halignment="RIGHT"
+                                GridPane.rowIndex="4">
+                            <GridPane.margin>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                            </GridPane.margin>
+                        </Button>
+                        <Button cancelButton="true" mnemonicParsing="false" onAction="#reinitialiserRechercheClient"
+                                text="Réinitialiser" GridPane.columnIndex="1" GridPane.halignment="RIGHT"
+                                GridPane.rowIndex="4">
+                            <GridPane.margin>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                            </GridPane.margin>
+                        </Button>
+                        <TextField fx:id="searchNom" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="300.0"
+                                   GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="RIGHT">
+                            <GridPane.margin>
+                                <Insets right="10.0"/>
+                            </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="searchPrenom" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="300.0"
+                                   GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="RIGHT"
+                                   GridPane.rowIndex="1">
+                            <GridPane.margin>
+                                <Insets right="10.0"/>
+                            </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="searchVille" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="300.0"
+                                   GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="RIGHT"
+                                   GridPane.rowIndex="2">
+                            <GridPane.margin>
+                                <Insets right="10.0"/>
+                            </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="searchPays" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="300.0"
+                                   GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="RIGHT"
+                                   GridPane.rowIndex="3">
+                            <GridPane.margin>
+                                <Insets right="10.0"/>
+                            </GridPane.margin>
+                        </TextField>
+                        <Label text="Prenom : " GridPane.rowIndex="1"/>
+                        <Label text="Ville : " GridPane.rowIndex="2"/>
+                        <Label text="Pays : " GridPane.rowIndex="3"/>
+                        <Label text="Nom :"/>
+                    </children>
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="168.0" minWidth="10.0" prefWidth="77.0"/>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="224.0" minWidth="10.0"
+                                           prefWidth="223.0"/>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="BOTTOM" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                </GridPane>
+            </content>
+            <GridPane.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </GridPane.margin>
+        </TitledPane>
+        <TitledPane fx:id="detail" alignment="TOP_LEFT" contentDisplay="BOTTOM" maxHeight="1.7976931348623157E308"
+                    maxWidth="1.7976931348623157E308" prefHeight="222.0" prefWidth="450.0" text="Client Details"
+                    textFill="#1b0680" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <content>
+                <GridPane prefHeight="143.0" prefWidth="360.0">
+                    <children>
+                        <Label fx:id="lblIdentite" GridPane.columnSpan="2">
+                            <font>
+                                <Font name="System Bold" size="24.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="lblAdresse" GridPane.columnSpan="2" GridPane.rowIndex="1"/>
+                        <Label fx:id="lblPays" GridPane.rowIndex="2"/>
+                        <Label fx:id="lblVille" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                        <Label fx:id="lblCodePostal" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+                    </children>
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="163.0" minWidth="10.0" prefWidth="76.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="267.0" minWidth="0.0" prefWidth="187.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="267.0" minWidth="10.0" prefWidth="96.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="68.0" minHeight="10.0" prefHeight="68.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="42.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="29.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                </GridPane>
+            </content>
+            <GridPane.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </GridPane.margin>
+        </TitledPane>
+        <TitledPane alignment="TOP_LEFT" animated="false" collapsible="false" contentDisplay="BOTTOM"
+                    maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="477.0"
+                    prefWidth="684.0" text="Clients" textFill="#1b0680" GridPane.rowSpan="2">
+            <content>
+                <VBox alignment="BOTTOM_RIGHT" fillWidth="false" maxHeight="1.7976931348623157E308"
+                      maxWidth="1.7976931348623157E308" prefHeight="417.0" prefWidth="650.0" spacing="10.0">
+                    <children>
+                        <TableView fx:id="tabClient" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="450.0"
+                                   prefWidth="1000.0">
+                            <columns>
+                                <TableColumn fx:id="colNom" maxWidth="1.7976931348623157E308" minWidth="150.0"
+                                             prefWidth="250.0" resizable="false" text="Nom"/>
+                                <TableColumn fx:id="colPrenom" maxWidth="1.7976931348623157E308" minWidth="0.0"
+                                             prefWidth="250.0" resizable="false" text="Prénom"/>
+                                <TableColumn fx:id="colVille" maxWidth="1.7976931348623157E308" prefWidth="250.0"
+                                             resizable="false" text="Ville"/>
+                                <TableColumn fx:id="colPays" maxWidth="1.7976931348623157E308" prefWidth="248.0"
+                                             resizable="false" text="Pays"/>
+                            </columns>
+                            <VBox.margin>
+                                <Insets bottom="10.0"/>
+                            </VBox.margin>
+                        </TableView>
+                    <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" prefHeight="65.0" prefWidth="998.0">
+                    <children>
+                        <Button defaultButton="false" layoutY="-3.0" mnemonicParsing="false" onAction="#importerClients" prefHeight="48.0" prefWidth="128.0" text="Importer Clients" wrapText="true" />
+                        <Button alignment="CENTER" defaultButton="true" layoutX="870.0" layoutY="-5.0"
+                                mnemonicParsing="false" onAction="#creerClient" prefHeight="48.0" prefWidth="128.0"
+                                text="Nouveau Client" wrapText="true"/>
+                    </children>
+                    </Pane>
+
+                    </children>
+                </VBox>
+            </content>
+            <GridPane.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </GridPane.margin>
+        </TitledPane>
+        <TitledPane fx:id="zoneAbonnement" animated="false" collapsible="false" maxHeight="1.7976931348623157E308"
+                    maxWidth="1.7976931348623157E308" text="Abonnements" textFill="#1b0680" GridPane.columnSpan="2"
+                    GridPane.rowIndex="2">
+            <content>
+                <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <TableView fx:id="tabAbonnement" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="249.0"
+                                   prefWidth="1200.0">
+                            <columns>
+                                <TableColumn fx:id="colRevue" prefWidth="450.0" resizable="false" text="Revue"/>
+                                <TableColumn fx:id="colDebut" prefWidth="375.0" resizable="false" text="Date Début"/>
+                                <TableColumn fx:id="colFin" prefWidth="375.0" resizable="false" text="Date Fin"/>
+                            </columns>
+                        </TableView>
+                        <Button alignment="CENTER" defaultButton="true" mnemonicParsing="false"
+                                onAction="#creerAbonnement" prefHeight="31.0" prefWidth="177.0"
+                                text="Nouveau Abonnement">
+                            <HBox.margin>
+                                <Insets left="20.0"/>
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                </HBox>
+            </content>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </padding>
+            <GridPane.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </GridPane.margin>
+        </TitledPane>
+    </children>
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1040.0" minWidth="10.0" prefWidth="1040.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="579.0" minWidth="10.0" prefWidth="460.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="377.0" minHeight="10.0" prefHeight="377.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="332.0" minHeight="10.0" prefHeight="168.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="317.0" minHeight="10.0" prefHeight="317.0" vgrow="SOMETIMES"/>
+    </rowConstraints>
+</GridPane>

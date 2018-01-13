@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<GridPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+          minWidth="-Infinity" prefHeight="860.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/8"
+          fx:controller="graphic.window.taboptions.TabOptionsController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="743.0" minWidth="10.0" prefWidth="483.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1030.0" minWidth="10.0" prefWidth="1017.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <TitledPane animated="false" collapsible="false" prefHeight="173.0" prefWidth="421.0" text="Choisir la pérsistance" textFill="#1b0680" GridPane.valignment="TOP">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="138.0" prefWidth="419.0">
+                    <children>
+                        <RadioButton fx:id="liste" layoutX="14.0" layoutY="28.0" mnemonicParsing="false" text="Liste Mémoire" />
+                        <RadioButton fx:id="bdd" layoutX="14.0" layoutY="84.0" mnemonicParsing="false" text="Base de données" />
+                    </children>
+                </AnchorPane>
+            </content>
+            <GridPane.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </GridPane.margin>
+        </TitledPane>
+        <TitledPane animated="false" collapsible="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="173.0"
+                    prefWidth="450.0" text="A propos" textFill="#1b0680" GridPane.columnIndex="1"
+                    GridPane.valignment="TOP">
+         <GridPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </GridPane.margin>
+         <content>
+            <GridPane>
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="314.0" minWidth="10.0" prefWidth="314.0"/>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="231.0" minWidth="10.0" prefWidth="159.0"/>
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Revue On Line - 1.38" />
+                   <Label text="Developped by Maxence &amp; Antony" GridPane.rowIndex="1"/>
+                  <Label text=" © 2017 - Népthys Soft - All rights reserved" GridPane.rowIndex="2" />
+                   <ImageView fx:id="imgLogo" fitHeight="150.0" fitWidth="194.0" pickOnBounds="true"
+                              preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2"
+                              GridPane.valignment="BOTTOM"/>
+               </children>
+            </GridPane>
+         </content>
+      </TitledPane>
+    </children>
+</GridPane>

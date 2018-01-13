@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" alignment="TOP_CENTER" prefHeight="354.0" prefWidth="705.0"
+      xmlns="http://javafx.com/javafx/8" fx:controller="graphic.revue.NewRevueController">
+   <children>
+      <GridPane hgap="10.0" prefHeight="298.0" prefWidth="680.0" style="-fx-border-color: black; -fx-border-width: 2px;">
+         <children>
+             <Label text="Titre* :">
+               <GridPane.margin>
+                  <Insets top="10.0" />
+               </GridPane.margin>
+            </Label>
+             <Label text="Description* :" GridPane.rowIndex="1" />
+            <Label text="Tarif :" GridPane.rowIndex="2" />
+             <Label text="Périodicité* :" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets top="10.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField id="id_titre" fx:id="titre" prefHeight="31.0" prefWidth="270.0" GridPane.columnIndex="1" GridPane.columnSpan="2">
+               <GridPane.margin>
+                  <Insets left="1.0" right="220.0" top="10.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField id="id_description" fx:id="description" alignment="TOP_LEFT" prefHeight="138.0" prefWidth="197.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="5.0" right="150.0" top="5.0" />
+               </GridPane.margin>
+            </TextField>
+             <TextField id="id_tarif" fx:id="tarif" maxHeight="-Infinity" maxWidth="1.7976931348623157E308"
+                        minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="63.0"
+                        GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets right="150.0" />
+               </GridPane.margin>
+            </TextField>
+            <ComboBox id="id_periodicite" fx:id="periodicite" prefWidth="150.0" promptText="Periodicité" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets top="10.0" />
+               </GridPane.margin>
+            </ComboBox>
+            <Label text="euros au numéro" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="70.0" />
+               </GridPane.margin>
+            </Label>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints halignment="RIGHT" maxWidth="237.0" minWidth="10.0" prefWidth="156.0" />
+            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="575.0" minWidth="10.0" prefWidth="211.0" />
+            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="425.0" minWidth="10.0" prefWidth="324.0" />
+         </columnConstraints>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <rowConstraints>
+            <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="192.0" minHeight="10.0" prefHeight="125.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="69.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="54.0" minHeight="10.0" prefHeight="54.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <VBox.margin>
+            <Insets left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+      </GridPane>
+      <FlowPane alignment="CENTER" prefHeight="70.0" prefWidth="600.0" rowValignment="TOP">
+         <children>
+            <Button fx:id="btnCreer" alignment="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#creerRevue" text="Créer" />
+         </children>
+      </FlowPane>
+   </children>
+</VBox>
