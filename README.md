@@ -39,4 +39,4 @@ Par exemple la Normalisation à essentiellement été faite par Antony tandis qu
 
 Estimation de l'investissement total :
 Maxence : 70%
-Anthony : 30%
+Antony : 30%
